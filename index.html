@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>pure js todo app localstorage</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .box{
+                margin-top: 20px;
+            }
+            .box h1{
+                text-align: center;
+                text-transform: uppercase;
+                background-color: #130f40;
+                color: white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container box">
+            <h1>pure js todo app localstorage</h1>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container">
+                    <form name="add" id="add" autocomplete="off" class="d-flex mb-2">
+                        <input class="form-control me-2" name="term" type="search" placeholder="add data">
+                        <button class="btn btn-outline-success" type="submit">add</button>
+                    </form>
+                    <b class="p-2" id="modify"></b>
+                    <form name="edit" id="edit" autocomplete="off" class="d-flex mb-2 d-none">
+                        <input class="form-control me-2" name="term" type="search" placeholder="add data">
+                        <button class="btn btn-outline-success" type="submit">update</button>
+                    </form>
+                </div>
+            </nav>
+            <table class="table text-center table-hover text-capitalize">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody id="box"></tbody>
+            </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+        <script src="todo.js"></script>
+    </body>
+</html>
